@@ -1,8 +1,3 @@
-#riddle solving 2
-#modifying to reduce the code (gator suggests switch statement so let's try)
-#25 June 2023
-#I reduced the code but by defining a function
-
 def user_answer():
     print(riddle)
     answer=(input("Your answer: ").lower())
