@@ -1,13 +1,17 @@
 def user_answer():
     print(riddle)
     answer=(input("Your answer: ").lower())
-    if answer == realanswer:
+    
+    #similaranswer is added to compare if user type the correct answer but in different form
+    #Only applicable for 'elves' and 'zero' question
+    
+    if similaranswer in answer:
         print("Congrats! You got in on the first try.")
     else:
         chance = 2
         while chance <5:
             newanswer=(input("Opps, you got it wrong! Try again: "))
-            if newanswer == realanswer:
+            if similaranswer in newanswer:
                 print("Finally you got it correct in " + str(chance) + " tries!")
                 break
                 
@@ -26,40 +30,50 @@ riddle=random.choice(["What thing has keys but no locks, has space but no room a
 
 if 'locks' in riddle:
     realanswer="keyboard" 
+    similaranswer="keyboard"
     user_answer()
 
 elif 'zero' in riddle:
     realanswer="nice belt"
+    similaranswer="belt"
     user_answer()
         
 elif 'shorter' in riddle:
     realanswer="short"
+    similaranswer="short"
     user_answer()
         
 elif 'walk' in riddle:
     realanswer="water"
+    similaranswer="water"
     user_answer()
 
 elif 'corner' in riddle:
     realanswer="stamp"
+    similaranswer="stamp"
     user_answer()
 
 elif 'break' in riddle:
     realanswer="promise"
+    similaranswer="promise"
     user_answer()
 
 elif 'wet' in riddle:
     realanswer="towel"
+    similaranswer="towel"
     user_answer()
 
 elif 'weigh' in riddle:
     realanswer="popcorn"
+    similaranswer="popcorn"
     user_answer()
         
 elif 'share' in riddle:
     realanswer="secret"
+    similaranswer="secret"
     user_answer()
 
 elif 'elves' in riddle:
     realanswer="elfabet"
+    similaranswer="abet"
     user_answer()
